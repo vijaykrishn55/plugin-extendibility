@@ -1,0 +1,19 @@
+{
+  "plugin_id": "secure_calculator",
+  "tool_name": "secure_calculator",
+  "name": "Secure Calculator",
+  "version": "1.0.0",
+  "description": "Evaluate basic arithmetic without executing Python code.",
+  "entrypoint": "worker.py",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "expression": {"type": "string", "minLength": 1, "maxLength": 256, "description": "A basic arithmetic expression."}
+    },
+    "required": ["expression"],
+    "additionalProperties": false
+  },
+  "permissions": [],
+  "timeout_seconds": 3,
+  "enabled": true
+}

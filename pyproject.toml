@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plugin-extensibility"
+version = "1.0.0"
+description = "Manifest-driven plugin host with validated subprocess execution"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.5.0", "jsonschema>=4.20.0"]
+
+[tool.setuptools.packages.find]
+include = ["plugin_host*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

@@ -1,0 +1,17 @@
+{
+  "project": "Plugins & Extensibility",
+  "test_command": "python -m pytest -q",
+  "exit_code": 0,
+  "passed": true,
+  "output": "..............                                                           [100%]\n14 passed in 3.11s",
+  "checks": [
+    "manifest discovery",
+    "tool schemas",
+    "hot reload",
+    "Pydantic/JSON Schema validation",
+    "path traversal defense",
+    "safe calculator",
+    "explicit permissions",
+    "timeout termination"
+  ]
+}

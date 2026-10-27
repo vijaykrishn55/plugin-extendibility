@@ -1,0 +1,19 @@
+{
+  "plugin_id": "safe_file_reader",
+  "tool_name": "safe_file_reader",
+  "name": "Safe File Reader",
+  "version": "1.0.0",
+  "description": "Read a UTF-8 text file from the approved workspace.",
+  "entrypoint": "worker.py",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "file_path": {"type": "string", "minLength": 1, "maxLength": 240, "description": "Relative path inside the approved workspace."}
+    },
+    "required": ["file_path"],
+    "additionalProperties": false
+  },
+  "permissions": ["filesystem.read"],
+  "timeout_seconds": 5,
+  "enabled": true
+}
